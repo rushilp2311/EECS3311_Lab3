@@ -19,7 +19,7 @@ feature -- command
 			else
 				model.game.update_error_state
 				model.game.set_output_error_msg_state
-				model.game.output_msg.append("%N"+ model.game.error.not_in_game)
+				model.game.output_msg.append("%N  "+ model.game.error.not_in_game)
 			end
 
 			etf_cmd_container.on_change.notify ([Current])

@@ -77,17 +77,17 @@ feature -- command
 				if move_row = 0 or column > model.game.board.width then
 					model.game.update_error_state
 					model.game.set_output_error_msg_state
-					model.game.output_msg.append ("%N"+model.game.error.move_outside_board+move_row.out)
+					model.game.output_msg.append ("%N  "+model.game.error.move_outside_board+move_row.out)
 				else
 						if valid_move.abs > model.game.max_player_moves then
 							model.game.update_error_state
 							model.game.set_output_error_msg_state
-							model.game.output_msg.append ("%N"+model.game.error.move_movement_range+move_row.out)
+							model.game.output_msg.append ("%N  "+model.game.error.move_movement_range+move_row.out)
 						else
 							if move_row = model.game.ship_location.row and column = model.game.ship_location.column then
 										model.game.update_error_state
 										model.game.set_output_error_msg_state
-										model.game.output_msg.append ("%N"+model.game.error.move_same_location+move_row.out)
+										model.game.output_msg.append ("%N  "+model.game.error.move_same_location+move_row.out)
 							else
 									model.move (move_row, column)
 							end
@@ -97,7 +97,7 @@ feature -- command
 			else
 				model.game.update_error_state
 				model.game.set_output_error_msg_state
-				model.game.output_msg.append("%N"+ model.game.error.not_in_game)
+				model.game.output_msg.append("%N  "+ model.game.error.not_in_game)
 			end
 
 			model.default_update

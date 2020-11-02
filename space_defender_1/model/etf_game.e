@@ -40,9 +40,6 @@ feature --attributes
 	old_ship_location : TUPLE[row:INTEGER_32; column:INTEGER_32]
 	error:ERROR_MSG
 
------- RESOLVE SHIP MOVEMENT AND PROJECTILE MOVEMENT
-
-
 feature --Operations
 
 	set_output_error_msg_state
@@ -79,7 +76,14 @@ feature --Operations
 			if projectile_list.count > 0 then
 			across 1 |..| projectile_list.count as pl
 				loop
-					output_msg.append ("%N A projectile moves:"+"["+row_indexes.item (projectile_list[pl.item].row).out+","+(projectile_list[pl.item].column - max_projectile_move).out+"]->"+"["+row_indexes.item (projectile_list[pl.item].row).out+","+projectile_list[pl.item].column.out+"]")
+					if  (projectile_list[pl.item].column > board.width) then
+						if (projectile_list[pl.item].column - max_projectile_move) < board.width then
+						output_msg.append ("%N"+"  A projectile moves: "+"["+row_indexes.item (projectile_list[pl.item].row).out+","+(projectile_list[pl.item].column - max_projectile_move).out+"] -> "+"out of the board")
+						end
+					else
+						output_msg.append ("%N"+"  A projectile moves: "+"["+row_indexes.item (projectile_list[pl.item].row).out+","+(projectile_list[pl.item].column - max_projectile_move).out+"] -> "+"["+row_indexes.item (projectile_list[pl.item].row).out+","+projectile_list[pl.item].column.out+"]")
+					end
+
 				end
 			end
 		end
@@ -89,10 +93,10 @@ feature --Operations
 				loop
 					if (projectile_list[pl.item].row = ship_location.row) and (projectile_list[pl.item].column = ship_location.column) then
 						is_game_started := false
-						output_msg.append ("%N The Starfighter moves and collides with a projectile: "+"["+row_indexes.item (old_ship_location.row).out+","+old_ship_location.column.out+"]"+"->"+"["+row_indexes.item (ship_location.row).out+","+ship_location.column.out+"]")
+						output_msg.append ("%N"+"  The Starfighter moves and collides with a projectile: "+"["+row_indexes.item (old_ship_location.row).out+","+old_ship_location.column.out+"]"+" -> "+"["+row_indexes.item (ship_location.row).out+","+ship_location.column.out+"]")
 						make_board
 						output_msg.append (grid_layout)
-						output_msg.append ("%N The game is over. Better luck next time!")
+						output_msg.append ("%N"+"  The game is over. Better luck next time!")
 					end
 				end
 
@@ -101,11 +105,12 @@ feature --Operations
 		do
 			across 1 |..| projectile_list.count as pl
 				loop
-					if (projectile_list[pl.item].row = ship_location.row) and (projectile_list[pl.item].column = ship_location.column) then
+					if (projectile_list[pl.item].row = ship_location.row) and (projectile_list[pl.item].column = ship_location.column) and is_game_started then
 						is_game_started := false
-						output_msg.append ("%N A projectile moves and collides with the Startfighter:"+"["+row_indexes.item (projectile_list[pl.item].row).out+","+(projectile_list[pl.item].column - max_projectile_move).out+"]->"+"["+row_indexes.item (projectile_list[pl.item].row).out+","+projectile_list[pl.item].column.out+"]")
+						output_msg.append ("%N"+"  A projectile moves and collides with the Startfighter: "+"["+row_indexes.item (projectile_list[pl.item].row).out+","+(projectile_list[pl.item].column - max_projectile_move).out+"] -> "+"["+row_indexes.item (projectile_list[pl.item].row).out+","+projectile_list[pl.item].column.out+"]")
+						make_board
 						output_msg.append (grid_layout)
-						output_msg.append ("%N The game is over. Better luck next time!")
+						output_msg.append ("%N"+"  The game is over. Better luck next time!")
 					end
 				end
 
@@ -127,9 +132,9 @@ feature --Operations
 				across 1 |..| board.width as c
 				loop
 					if(ship_location.row ~ r.item and ship_location.column ~ c.item) then
-							board.put (" S ",r.item,c.item)
+							board.put ("S",r.item,c.item)
 					else
-							board.put (" _ ",r.item,c.item)
+							board.put ("_",r.item,c.item)
 					end
 				end
 			end
@@ -142,10 +147,10 @@ feature --Operations
 					if projectile_list[pl.item].row <= board.height and projectile_list[pl.item].column <= board.width
 					then
 						if (projectile_list[pl.item].row = ship_location.row) and (projectile_list[pl.item].column = ship_location.column)  then
-							board.put (" X ", projectile_list[pl.item].row,projectile_list[pl.item].column)
+							board.put ("X", projectile_list[pl.item].row,projectile_list[pl.item].column)
 						else
 
-							board.put (" * ", projectile_list[pl.item].row,projectile_list[pl.item].column)
+							board.put ("*", projectile_list[pl.item].row,projectile_list[pl.item].column)
 						end
 
 					end
@@ -153,15 +158,30 @@ feature --Operations
 			end
 
 
-			grid_layout.append("%N    ")
-			across 1 |..| board.width as i loop grid_layout.append(" " + fi.formatted (i.item)) end
+			grid_layout.append("%N")
+			grid_layout.append ("      ")
+			across 1 |..| board.width as i
+			loop
+				if (i.item + 1) = board.width  then
+					grid_layout.append("" +  (i.item).out+" ")
+				elseif (i.item ) = board.width then
+					grid_layout.append("" +  (i.item).out+"")
+				else
+					grid_layout.append("" +  (i.item).out+"  ")
+				end
+
+			end
 			across 1 |..| board.height as r
 			loop
 				grid_layout.append ("%N    "+ row_indexes[r.item].out)
+				grid_layout.append (" ")
 				across 1 |..| board.width as c
 				loop
 					grid_layout.append (board.item (r.item, c.item))
+					if c.item < board.width then
+						grid_layout.append ("  ")
 
+					end
 				end
 			end
 		end
@@ -241,12 +261,11 @@ feature --Operations
 						j < row
 					loop
 					if is_game_started then
-					ship_location := [j  , ship_location.column]
+
+							ship_location := [j  , ship_location.column]
 							is_ship_collided
 
-
-
-							end
+						end
 
 						j := j - 1
 					end
@@ -255,11 +274,11 @@ feature --Operations
 				-- move right in same row
 				if ship_location.column < column and is_game_started then
 					across
-						(ship_location.column) |..| (column)   is index
+						(ship_location.column + 1) |..| (column)   is index
 					loop
 
 							if is_game_started then
-							ship_location := [ship_location.row, index]
+							ship_location := [ship_location.row, index+1]
 							is_ship_collided
 							end
 
@@ -276,9 +295,8 @@ feature --Operations
 						k < column
 					loop
 							if is_game_started then
-
-							is_ship_collided
 								ship_location := [ship_location.row, k]
+								is_ship_collided
 							end
 
 
@@ -289,11 +307,12 @@ feature --Operations
 			error_state:=0
 			update_success_state
 			set_output_success_msg_state
+			display_projectile_location
 			is_ship_collided
 			if is_game_started then
 				make_board
-				display_projectile_location
-				output_msg.append ("%N The Starfighter moves : "+"["+row_indexes.item (old_ship_location.row).out+","+old_ship_location.column.out+"]"+"->"+"["+row_indexes.item (ship_location.row).out+","+ship_location.column.out+"]")
+
+				output_msg.append ("%N"+"  The Starfighter moves: "+"["+row_indexes.item (old_ship_location.row).out+","+old_ship_location.column.out+"]"+"->"+"["+row_indexes.item (ship_location.row).out+","+ship_location.column.out+"]")
 			end
 
 
@@ -305,6 +324,10 @@ feature --Operations
 			projectile_location :TUPLE[row:INTEGER_32;column:INTEGER_32]
 		do
 			update_projectile_location
+			is_projectile_collided
+			if is_game_started then
+
+
 			create projectile_location.default_create
 			projectile_location.row := ship_location.row
 			projectile_location.column := ship_location.column + 1
@@ -317,6 +340,7 @@ feature --Operations
 
 			projectile_list.force (projectile_location, projectile_list.count+1)
 			make_board
+			end
 			error_state := 0
 
 
@@ -331,14 +355,13 @@ feature --Operations
 		do
 			update_success_state
 			set_output_success_msg_state
-
 			update_projectile_location
-
-			if is_game_started then
-				display_projectile_location
-			end
-			make_board
 			is_projectile_collided
+			if is_game_started then
+				make_board
+				display_projectile_location
+				output_msg.append ("%N"+"  The Starfighter stays at: "+"["+row_indexes.item (ship_location.row).out+","+ship_location.column.out+"]")
+			end
 			error_state:=0
 
 
@@ -353,7 +376,7 @@ feature --Operations
 			update_success_state
 			set_output_success_msg_state
 			is_game_started:=false
-			output_msg.append("%N"+"Game has been exited.")
+			output_msg.append("%N"+"  Game has been exited.")
 		end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
@@ -366,7 +389,6 @@ feature --Operations
 			else
 				Result.append (output_msg)
 				if is_game_started then
-					Result.append ("    ")
 					Result.append (grid_layout)
 				end
 			end
