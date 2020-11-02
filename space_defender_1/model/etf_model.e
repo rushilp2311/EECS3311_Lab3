@@ -74,7 +74,7 @@ feature -- queries
 			create Result.make_from_string ("")
 			if(game.success_state = 0 and game.error_state = 0)
 			then
-				Result := "Welcome to Space Defender Version 1."
+				Result := "  Welcome to Space Defender Version 1."
 			else
 				Result.append(game.output)
 			end
