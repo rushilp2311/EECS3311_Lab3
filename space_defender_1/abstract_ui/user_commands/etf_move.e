@@ -21,9 +21,9 @@ feature -- command
 			-- perform some update on the model state
 
 
-			if model.game.is_game_started then
+			if model.is_game_started then
 				move_row := 0
-				valid_move := (row - model.game.ship_location.row) + (column - model.game.ship_location.column)
+				valid_move := (row - model.ship_location.row) + (column - model.ship_location.column)
 				if
 					row = A
 				then
@@ -74,33 +74,36 @@ feature -- command
 				then
 					move_row:=10
 				end
-				if move_row = 0 or column > model.game.board.width then
-					model.game.update_error_state
-					model.game.set_output_error_msg_state
-					model.game.output_msg.append ("%N  "+model.game.error.move_outside_board+move_row.out)
+				if move_row = 0 or column > model.board.width then
+					model.update_error_state
+					model.set_output_error_msg_state
+					model.output_msg.append ("%N  "+model.error.move_outside_board)
 				else
-						if valid_move.abs > model.game.max_player_moves then
-							model.game.update_error_state
-							model.game.set_output_error_msg_state
-							model.game.output_msg.append ("%N  "+model.game.error.move_movement_range+move_row.out)
+						if valid_move.abs > model.max_player_moves then
+							model.update_error_state
+							model.set_output_error_msg_state
+							model.output_msg.append ("%N  "+model.error.move_movement_range)
 						else
-							if move_row = model.game.ship_location.row and column = model.game.ship_location.column then
-										model.game.update_error_state
-										model.game.set_output_error_msg_state
-										model.game.output_msg.append ("%N  "+model.game.error.move_same_location+move_row.out)
+							if move_row = model.ship_location.row and column = model.ship_location.column then
+										model.update_error_state
+										model.set_output_error_msg_state
+										model.output_msg.append ("%N  "+model.error.move_same_location)
 							else
-									model.move (move_row, column)
+									model.add_command (create {MOVE_COMMAND}.make)
+
+									model.history[model.cursor].execute (move_row, column)
+
 							end
 						end
 
 				end
 			else
-				model.game.update_error_state
-				model.game.set_output_error_msg_state
-				model.game.output_msg.append("%N  "+ model.game.error.not_in_game)
+				model.update_error_state
+				model.set_output_error_msg_state
+				model.output_msg.append("%N  "+ model.error.not_in_game)
 			end
 
-			model.default_update
+
 			etf_cmd_container.on_change.notify ([Current])
     	end
 

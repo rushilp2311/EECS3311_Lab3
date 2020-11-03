@@ -13,6 +13,7 @@
 		</option>
 		<setting name="dead_code_removal" value="feature"/>
 		<capability>
+			<catcall_detection support="none"/>
 			<concurrency support="scoop"/>
 			<void_safety support="all" use="all"/>
 		</capability>
@@ -38,6 +39,14 @@
 		<library name="vision2" location="$ISE_LIBRARY\library\vision2\vision2.ecf"/>
 		<cluster name="generated_code" location=".\generated_code\" recursive="true"/>
 		<cluster name="root" location=".\root\" recursive="true"/>
-		<cluster name="space_defender_1" location=".\space_defender_1\" recursive="true"/>
+		<cluster name="space_defender_1" location=".\space_defender_1\" recursive="true">
+			<file_rule>
+				<exclude>^model/actions$</exclude>
+			</file_rule>
+			<file_rule>
+				<exclude>^model$</exclude>
+			</file_rule>
+			
+		</cluster>
 	</target>
 </system>
