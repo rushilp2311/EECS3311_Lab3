@@ -25,7 +25,7 @@ feature -- command
 				if player_mov > ((row-1)+(column-1))  then
 					model.update_error_state
 					model.set_output_error_msg_state
-					model.output_msg.append("%N"+model.error.play_movement_parameter)
+					model.output_msg.append("%N  "+model.error.play_movement_parameter)
 				else
 
 					model.play(row,column,player_mov,project_mov);

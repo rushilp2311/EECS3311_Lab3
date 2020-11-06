@@ -1,0 +1,259 @@
+  Welcome to Space Defender Version 1.
+->play(8,10,11,5)
+  state:1.0, ok
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D S  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->undo
+  state:1.1, error
+  Nothing left to undo.
+->move(G,3)
+  state:2.0, ok
+  The Starfighter moves: [D,1] -> [G,3]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  S  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->pass
+  state:3.0, ok
+  The Starfighter stays at: [G,3]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  S  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->pass
+  state:4.0, ok
+  The Starfighter stays at: [G,3]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  S  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->undo
+  state:3.0, ok
+  The Starfighter stays at: [G,3]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  S  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->redo
+  state:4.0, ok
+  The Starfighter stays at: [G,3]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  S  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->pass
+  state:5.0, ok
+  The Starfighter stays at: [G,3]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  S  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->undo
+  state:4.0, ok
+  The Starfighter stays at: [G,3]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  S  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->undo
+  state:3.0, ok
+  The Starfighter stays at: [G,3]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  S  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->fire
+  state:4.0, ok
+  The Starfighter fires a projectile at: [G,3]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  S  *  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->undo
+  state:3.0, ok
+  The Starfighter stays at: [G,3]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  S  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->move(B,5)
+  state:4.0, ok
+  The Starfighter moves: [G,3] -> [B,5]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  S  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->pass
+  state:5.0, ok
+  The Starfighter stays at: [B,5]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  S  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->fire
+  state:6.0, ok
+  The Starfighter fires a projectile at: [B,5]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  S  *  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->pass
+  state:7.0, ok
+  A projectile moves: [B,6] -> out of the board
+  The Starfighter stays at: [B,5]
+      1  2  3  4  5  6  7  8  9 10
+    A _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  S  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _
+    H _  _  _  _  _  _  _  _  _  _
+->abort
+  state:8.0, ok
+  Game has been exited.
+->play(4,17,38,5)
+  state:8.1, error
+  Starfighter movement should not exceed row - 1 + column - 1 size of the board.
+->move(C,8)
+  state:8.2, error
+  Not in game.
+->fire
+  state:8.3, error
+  Not in game.
+->move(A,12)
+  state:8.4, error
+  Not in game.
+->fire
+  state:8.5, error
+  Not in game.
+->redo
+  state:8.6, error
+  Not in game.
+->move(C,5)
+  state:8.7, error
+  Not in game.
+->undo
+  state:8.8, error
+  Not in game.
+->move(D,1)
+  state:8.9, error
+  Not in game.
+->move(C,17)
+  state:8.10, error
+  Not in game.
+->pass
+  state:8.11, error
+  Not in game.
+->pass
+  state:8.12, error
+  Not in game.
+->pass
+  state:8.13, error
+  Not in game.
+->fire
+  state:8.14, error
+  Not in game.
+->move(B,12)
+  state:8.15, error
+  Not in game.
+->move(C,14)
+  state:8.16, error
+  Not in game.
+->fire
+  state:8.17, error
+  Not in game.
+->move(D,6)
+  state:8.18, error
+  Not in game.
+->undo
+  state:8.19, error
+  Not in game.
+->move(B,11)
+  state:8.20, error
+  Not in game.
+->undo
+  state:8.21, error
+  Not in game.
+->pass
+  state:8.22, error
+  Not in game.
+->fire
+  state:8.23, error
+  Not in game.
+->abort
+  state:8.24, error
+  Not in game.

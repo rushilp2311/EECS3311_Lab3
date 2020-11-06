@@ -1,0 +1,85 @@
+  Welcome to Space Defender Version 1.
+->play(4,24,34,3)
+  state:0.1, error
+  Starfighter movement should not exceed row - 1 + column - 1 size of the board.
+->undo
+  state:0.2, error
+  Not in game.
+->fire
+  state:0.3, error
+  Not in game.
+->fire
+  state:0.4, error
+  Not in game.
+->move(C,6)
+  state:0.5, error
+  Not in game.
+->fire
+  state:0.6, error
+  Not in game.
+->move(C,24)
+  state:0.7, error
+  Not in game.
+->pass
+  state:0.8, error
+  Not in game.
+->move(B,10)
+  state:0.9, error
+  Not in game.
+->pass
+  state:0.10, error
+  Not in game.
+->fire
+  state:0.11, error
+  Not in game.
+->undo
+  state:0.12, error
+  Not in game.
+->pass
+  state:0.13, error
+  Not in game.
+->move(B,17)
+  state:0.14, error
+  Not in game.
+->fire
+  state:0.15, error
+  Not in game.
+->move(C,8)
+  state:0.16, error
+  Not in game.
+->pass
+  state:0.17, error
+  Not in game.
+->redo
+  state:0.18, error
+  Not in game.
+->pass
+  state:0.19, error
+  Not in game.
+->fire
+  state:0.20, error
+  Not in game.
+->fire
+  state:0.21, error
+  Not in game.
+->fire
+  state:0.22, error
+  Not in game.
+->move(C,10)
+  state:0.23, error
+  Not in game.
+->fire
+  state:0.24, error
+  Not in game.
+->pass
+  state:0.25, error
+  Not in game.
+->undo
+  state:0.26, error
+  Not in game.
+->undo
+  state:0.27, error
+  Not in game.
+->abort
+  state:0.28, error
+  Not in game.

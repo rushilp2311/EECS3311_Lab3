@@ -17,13 +17,15 @@ feature -- command
 		local
 			move_row:INTEGER_32
 			valid_move:INTEGER_32
+			valid_row:INTEGER_32
+			valid_col:INTEGER_32
     	do
 			-- perform some update on the model state
 
 
 			if model.is_game_started then
 				move_row := 0
-				valid_move := (row - model.ship_location.row) + (column - model.ship_location.column)
+
 				if
 					row = A
 				then
@@ -74,11 +76,15 @@ feature -- command
 				then
 					move_row:=10
 				end
+
 				if move_row = 0 or column > model.board.width then
 					model.update_error_state
 					model.set_output_error_msg_state
 					model.output_msg.append ("%N  "+model.error.move_outside_board)
 				else
+						valid_row := (move_row - model.ship_location.row)
+						valid_col := (column - model.ship_location.column)
+						valid_move := valid_row.abs + valid_col.abs
 						if valid_move.abs > model.max_player_moves then
 							model.update_error_state
 							model.set_output_error_msg_state
@@ -89,8 +95,10 @@ feature -- command
 										model.set_output_error_msg_state
 										model.output_msg.append ("%N  "+model.error.move_same_location)
 							else
+								if model.history.count > 0 and model.cursor > 0 then
+									model.history.remove_tail (model.history.count - model.cursor)
+								end
 									model.add_command (create {MOVE_COMMAND}.make)
-
 									model.history[model.cursor].execute (move_row, column)
 
 							end

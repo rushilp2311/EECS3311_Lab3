@@ -1,0 +1,140 @@
+  Welcome to Space Defender Version 1.
+->play(7,12,6,2)
+  state:1.0, ok
+      1  2  3  4  5  6  7  8  9 10 11 12
+    A _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _
+    D S  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _
+->redo
+  state:1.1, error
+  Nothing left to redo.
+->abort
+  state:2.0, ok
+  Game has been exited.
+->fire
+  state:2.1, error
+  Not in game.
+->move(D,2)
+  state:2.2, error
+  Not in game.
+->undo
+  state:2.3, error
+  Not in game.
+->pass
+  state:2.4, error
+  Not in game.
+->redo
+  state:2.5, error
+  Not in game.
+->fire
+  state:2.6, error
+  Not in game.
+->pass
+  state:2.7, error
+  Not in game.
+->move(A,1)
+  state:2.8, error
+  Not in game.
+->fire
+  state:2.9, error
+  Not in game.
+->pass
+  state:2.10, error
+  Not in game.
+->undo
+  state:2.11, error
+  Not in game.
+->move(E,10)
+  state:2.12, error
+  Not in game.
+->fire
+  state:2.13, error
+  Not in game.
+->fire
+  state:2.14, error
+  Not in game.
+->undo
+  state:2.15, error
+  Not in game.
+->fire
+  state:2.16, error
+  Not in game.
+->undo
+  state:2.17, error
+  Not in game.
+->pass
+  state:2.18, error
+  Not in game.
+->fire
+  state:2.19, error
+  Not in game.
+->pass
+  state:2.20, error
+  Not in game.
+->move(E,11)
+  state:2.21, error
+  Not in game.
+->undo
+  state:2.22, error
+  Not in game.
+->undo
+  state:2.23, error
+  Not in game.
+->fire
+  state:2.24, error
+  Not in game.
+->fire
+  state:2.25, error
+  Not in game.
+->move(F,9)
+  state:2.26, error
+  Not in game.
+->pass
+  state:2.27, error
+  Not in game.
+->undo
+  state:2.28, error
+  Not in game.
+->move(B,5)
+  state:2.29, error
+  Not in game.
+->move(E,5)
+  state:2.30, error
+  Not in game.
+->move(C,6)
+  state:2.31, error
+  Not in game.
+->pass
+  state:2.32, error
+  Not in game.
+->fire
+  state:2.33, error
+  Not in game.
+->fire
+  state:2.34, error
+  Not in game.
+->pass
+  state:2.35, error
+  Not in game.
+->pass
+  state:2.36, error
+  Not in game.
+->pass
+  state:2.37, error
+  Not in game.
+->move(A,12)
+  state:2.38, error
+  Not in game.
+->move(B,7)
+  state:2.39, error
+  Not in game.
+->move(D,3)
+  state:2.40, error
+  Not in game.
+->abort
+  state:2.41, error
+  Not in game.

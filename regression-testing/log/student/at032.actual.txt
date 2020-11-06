@@ -1,0 +1,83 @@
+  Welcome to Space Defender Version 1.
+->play(4,17,23,4)
+  state:0.1, error
+Starfighter movement should not exceed row - 1 + column - 1 size of the board.
+->redo
+  state:0.2, error
+  Not in game.
+->undo
+  state:0.3, error
+  Not in game.
+->move(B,7)
+  state:0.4, error
+  Not in game.
+->fire
+  state:0.5, error
+  Not in game.
+->move(A,9)
+  state:0.6, error
+  Not in game.
+->fire
+  state:0.7, error
+  Not in game.
+->pass
+  state:0.8, error
+  Not in game.
+->move(A,13)
+  state:0.9, error
+  Not in game.
+->fire
+  state:0.10, error
+  Not in game.
+->fire
+  state:0.11, error
+  Not in game.
+->abort
+  state:0.12, error
+  Not in game.
+->play(6,9,5,1)
+  state:1.0, ok
+      1  2  3  4  5  6  7  8 9
+    A _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _
+    C S  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _
+->move(D,4)
+  state:2.0, ok
+  The Starfighter moves: [C,1] -> [D,4]
+      1  2  3  4  5  6  7  8 9
+    A _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _
+    D _  _  _  S  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _
+->move(D,4)
+  state:2.1, error
+  The Starfighter is already at that location.
+->move(E,1)
+  state:3.0, ok
+  The Starfighter moves: [D,4] -> [E,1]
+      1  2  3  4  5  6  7  8 9
+    A _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _
+    E S  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _
+->move(F,8)
+  state:3.1, error
+  The location to move is out of the Starfighter's movement range.
+->undo
+  state:2.1, ok
+  The Starfighter moves: [C,1] -> [D,4]
+->undo
+  state:1.1, ok
+->undo
+  state:1.2, error
+  Nothing left to undo.
+->abort
+  state:2.0, ok
+  Game has been exited.

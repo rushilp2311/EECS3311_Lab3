@@ -39,8 +39,10 @@ feature
 			model.display_projectile_location
 			model.make_board
 			if model.cursor -1 > 0 then
-				if (model.location[model.cursor - 1].curr.row /= model.location[model.cursor].old_l.row) and (model.location[model.cursor-1].curr.column /= model.location[model.cursor].old_l.column) then
+				if (model.location[model.cursor - 1].curr.row = model.location[model.cursor].old_l.row) and (model.location[model.cursor-1].curr.column = model.location[model.cursor].old_l.column) then
 					model.output_msg.append ("%N"+"  The Starfighter moves: "+"["+model.row_indexes.item (model.location[model.cursor - 1].curr.row).out+","+model.location[model.cursor-1].curr.column.out+"]"+" -> "+"["+model.row_indexes.item (model.location[model.cursor].old_l.row).out+","+model.location[model.cursor].old_l.column.out+"]")
+				else
+					model.output_msg.append ("%N"+"  The Starfighter stays at: "+"["+model.row_indexes.item (model.ship_location.row).out+","+model.ship_location.column.out+"]")
 
 				end
 			end
@@ -48,8 +50,9 @@ feature
 		end
 	redo
 		do
-			model.increment_cursor
-			model.history[model.cursor].execute (model.ship_location.row, model.ship_location.column)
+			if model.cursor + 1 < model.location.count then
+				model.history[model.cursor].execute (model.location[model.cursor+1].curr.row,model.location[model.cursor+1].curr.column)
+			end
 
 		end
 

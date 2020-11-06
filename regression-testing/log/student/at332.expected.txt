@@ -1,0 +1,134 @@
+  Welcome to Space Defender Version 1.
+->play(6,21,10,2)
+  state:1.0, ok
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:2.0, ok
+  The Starfighter fires a projectile at: [C,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C S  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:3.0, ok
+  A projectile moves: [C,2] -> [C,4]
+  The Starfighter fires a projectile at: [C,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C S  *  _  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->move(A,16)
+  state:3.1, error
+  The location to move to is out of the Starfighter's movement range.
+->move(A,17)
+  state:3.2, error
+  The location to move to is out of the Starfighter's movement range.
+->pass
+  state:4.0, ok
+  A projectile moves: [C,4] -> [C,6]
+  A projectile moves: [C,2] -> [C,4]
+  The Starfighter stays at: [C,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C S  _  _  *  _  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:5.0, ok
+  A projectile moves: [C,6] -> [C,8]
+  A projectile moves: [C,4] -> [C,6]
+  The Starfighter fires a projectile at: [C,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C S  *  _  _  _  *  _  *  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->move(D,20)
+  state:5.1, error
+  The location to move to is out of the Starfighter's movement range.
+->pass
+  state:6.0, ok
+  A projectile moves: [C,8] -> [C,10]
+  A projectile moves: [C,6] -> [C,8]
+  A projectile moves: [C,2] -> [C,4]
+  The Starfighter stays at: [C,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C S  _  _  *  _  _  _  *  _  *  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->move(A,13)
+  state:6.1, error
+  The location to move to is out of the Starfighter's movement range.
+->move(D,15)
+  state:6.2, error
+  The location to move to is out of the Starfighter's movement range.
+->abort
+  state:7.0, ok
+  Game has been exited.
+->play(10,6,16,2)
+  state:7.1, error
+  Starfighter movement should not exceed row - 1 + column - 1 size of the board.
+->pass
+  state:7.2, error
+  Not in game.
+->pass
+  state:7.3, error
+  Not in game.
+->fire
+  state:7.4, error
+  Not in game.
+->move(F,1)
+  state:7.5, error
+  Not in game.
+->undo
+  state:7.6, error
+  Not in game.
+->fire
+  state:7.7, error
+  Not in game.
+->fire
+  state:7.8, error
+  Not in game.
+->pass
+  state:7.9, error
+  Not in game.
+->pass
+  state:7.10, error
+  Not in game.
+->undo
+  state:7.11, error
+  Not in game.
+->fire
+  state:7.12, error
+  Not in game.
+->move(D,5)
+  state:7.13, error
+  Not in game.
+->fire
+  state:7.14, error
+  Not in game.
+->move(D,1)
+  state:7.15, error
+  Not in game.
+->abort
+  state:7.16, error
+  Not in game.

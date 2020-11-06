@@ -1,0 +1,175 @@
+  Welcome to Space Defender Version 1.
+->play(4,8,9,2)
+  state:1.0, ok
+      1  2  3  4  5  6  7  8
+    A _  _  _  _  _  _  _  _
+    B S  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _
+->undo
+  state:1.1, error
+  Nothing left to undo.
+->move(A,3)
+  state:2.0, ok
+  The Starfighter moves: [B,1] -> [A,3]
+      1  2  3  4  5  6  7  8
+    A _  _  S  _  _  _  _  _
+    B _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _
+->fire
+  state:3.0, ok
+  The Starfighter fires a projectile at: [A,3]
+      1  2  3  4  5  6  7  8
+    A _  _  S  *  _  _  _  _
+    B _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _
+->move(A,6)
+  state:4.0, ok
+  A projectile moves: [A,4] -> [A,6]
+  The Starfighter moves and collides with a projectile: [A,3] -> [A,6]
+      1  2  3  4  5  6  7  8
+    A _  _  _  _  _  X  _  _
+    B _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _
+  The game is over. Better luck next time!
+->pass
+  state:4.1, error
+  Not in game.
+->fire
+  state:4.2, error
+  Not in game.
+->pass
+  state:4.3, error
+  Not in game.
+->undo
+  state:4.4, error
+  Not in game.
+->pass
+  state:4.5, error
+  Not in game.
+->undo
+  state:4.6, error
+  Not in game.
+->fire
+  state:4.7, error
+  Not in game.
+->pass
+  state:4.8, error
+  Not in game.
+->undo
+  state:4.9, error
+  Not in game.
+->undo
+  state:4.10, error
+  Not in game.
+->move(A,6)
+  state:4.11, error
+  Not in game.
+->undo
+  state:4.12, error
+  Not in game.
+->redo
+  state:4.13, error
+  Not in game.
+->pass
+  state:4.14, error
+  Not in game.
+->fire
+  state:4.15, error
+  Not in game.
+->fire
+  state:4.16, error
+  Not in game.
+->pass
+  state:4.17, error
+  Not in game.
+->undo
+  state:4.18, error
+  Not in game.
+->redo
+  state:4.19, error
+  Not in game.
+->abort
+  state:4.20, error
+  Not in game.
+->pass
+  state:4.21, error
+  Not in game.
+->pass
+  state:4.22, error
+  Not in game.
+->fire
+  state:4.23, error
+  Not in game.
+->undo
+  state:4.24, error
+  Not in game.
+->fire
+  state:4.25, error
+  Not in game.
+->pass
+  state:4.26, error
+  Not in game.
+->fire
+  state:4.27, error
+  Not in game.
+->fire
+  state:4.28, error
+  Not in game.
+->undo
+  state:4.29, error
+  Not in game.
+->fire
+  state:4.30, error
+  Not in game.
+->move(C,4)
+  state:4.31, error
+  Not in game.
+->move(C,4)
+  state:4.32, error
+  Not in game.
+->fire
+  state:4.33, error
+  Not in game.
+->move(B,7)
+  state:4.34, error
+  Not in game.
+->move(B,4)
+  state:4.35, error
+  Not in game.
+->pass
+  state:4.36, error
+  Not in game.
+->undo
+  state:4.37, error
+  Not in game.
+->fire
+  state:4.38, error
+  Not in game.
+->pass
+  state:4.39, error
+  Not in game.
+->fire
+  state:4.40, error
+  Not in game.
+->pass
+  state:4.41, error
+  Not in game.
+->fire
+  state:4.42, error
+  Not in game.
+->fire
+  state:4.43, error
+  Not in game.
+->redo
+  state:4.44, error
+  Not in game.
+->fire
+  state:4.45, error
+  Not in game.
+->abort
+  state:4.46, error
+  Not in game.

@@ -1,0 +1,680 @@
+  Welcome to Space Defender Version 1.
+->play(3,18,9,2)
+  state:1.0, ok
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->move(C,2)
+  state:2.0, ok
+  The Starfighter moves: [B,1] -> [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->pass
+  state:3.0, ok
+  The Starfighter stays at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->pass
+  state:4.0, ok
+  The Starfighter stays at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:5.0, ok
+  The Starfighter fires a projectile at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->undo
+  state:4.0, ok
+  The Starfighter stays at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:5.0, ok
+  The Starfighter fires a projectile at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->undo
+  state:4.0, ok
+  The Starfighter stays at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->pass
+  state:5.0, ok
+  The Starfighter stays at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->pass
+  state:6.0, ok
+  The Starfighter stays at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:7.0, ok
+  The Starfighter fires a projectile at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->pass
+  state:8.0, ok
+  A projectile moves: [C,3] -> [C,5]
+  The Starfighter stays at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  _  _  *  _  _  _  _  _  _  _  _  _  _  _  _  _
+->pass
+  state:9.0, ok
+  A projectile moves: [C,5] -> [C,7]
+  The Starfighter stays at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  _  _  _  _  *  _  _  _  _  _  _  _  _  _  _  _
+->undo
+  state:8.0, ok
+  A projectile moves: [C,3] -> [C,5]
+  The Starfighter stays at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  _  _  *  _  _  _  _  _  _  _  _  _  _  _  _  _
+->move(A,17)
+  state:8.1, error
+  The location to move to is out of the Starfighter's movement range.
+->pass
+  state:9.0, ok
+  A projectile moves: [C,5] -> [C,7]
+  The Starfighter stays at: [C,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  S  _  _  _  _  *  _  _  _  _  _  _  _  _  _  _  _
+->move(B,2)
+  state:10.0, ok
+  A projectile moves: [C,7] -> [C,9]
+  The Starfighter moves: [C,2] -> [B,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  *  _  _  _  _  _  _  _  _  _
+->pass
+  state:11.0, ok
+  A projectile moves: [C,9] -> [C,11]
+  The Starfighter stays at: [B,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  *  _  _  _  _  _  _  _
+->move(B,16)
+  state:11.1, error
+  The location to move to is out of the Starfighter's movement range.
+->fire
+  state:12.0, ok
+  A projectile moves: [C,11] -> [C,13]
+  The Starfighter fires a projectile at: [B,2]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  S  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  *  _  _  _  _  _
+->move(C,11)
+  state:12.1, error
+  The location to move to is out of the Starfighter's movement range.
+->move(B,8)
+  state:13.0, ok
+  A projectile moves: [C,13] -> [C,15]
+  A projectile moves: [B,3] -> [B,5]
+  The Starfighter moves and collides with a projectile: [B,2] -> [B,5]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  X  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  *  _  _  _
+  The game is over. Better luck next time!
+->fire
+  state:13.1, error
+  Not in game.
+->move(B,6)
+  state:13.2, error
+  Not in game.
+->fire
+  state:13.3, error
+  Not in game.
+->pass
+  state:13.4, error
+  Not in game.
+->fire
+  state:13.5, error
+  Not in game.
+->move(C,13)
+  state:13.6, error
+  Not in game.
+->abort
+  state:13.7, error
+  Not in game.
+->move(C,9)
+  state:13.8, error
+  Not in game.
+->fire
+  state:13.9, error
+  Not in game.
+->abort
+  state:13.10, error
+  Not in game.
+->fire
+  state:13.11, error
+  Not in game.
+->fire
+  state:13.12, error
+  Not in game.
+->fire
+  state:13.13, error
+  Not in game.
+->move(C,1)
+  state:13.14, error
+  Not in game.
+->fire
+  state:13.15, error
+  Not in game.
+->undo
+  state:13.16, error
+  Not in game.
+->fire
+  state:13.17, error
+  Not in game.
+->pass
+  state:13.18, error
+  Not in game.
+->move(A,16)
+  state:13.19, error
+  Not in game.
+->pass
+  state:13.20, error
+  Not in game.
+->fire
+  state:13.21, error
+  Not in game.
+->undo
+  state:13.22, error
+  Not in game.
+->move(A,17)
+  state:13.23, error
+  Not in game.
+->move(A,10)
+  state:13.24, error
+  Not in game.
+->fire
+  state:13.25, error
+  Not in game.
+->pass
+  state:13.26, error
+  Not in game.
+->fire
+  state:13.27, error
+  Not in game.
+->move(C,1)
+  state:13.28, error
+  Not in game.
+->move(C,16)
+  state:13.29, error
+  Not in game.
+->move(A,11)
+  state:13.30, error
+  Not in game.
+->move(B,17)
+  state:13.31, error
+  Not in game.
+->redo
+  state:13.32, error
+  Not in game.
+->undo
+  state:13.33, error
+  Not in game.
+->undo
+  state:13.34, error
+  Not in game.
+->undo
+  state:13.35, error
+  Not in game.
+->move(A,10)
+  state:13.36, error
+  Not in game.
+->pass
+  state:13.37, error
+  Not in game.
+->pass
+  state:13.38, error
+  Not in game.
+->fire
+  state:13.39, error
+  Not in game.
+->pass
+  state:13.40, error
+  Not in game.
+->pass
+  state:13.41, error
+  Not in game.
+->pass
+  state:13.42, error
+  Not in game.
+->pass
+  state:13.43, error
+  Not in game.
+->fire
+  state:13.44, error
+  Not in game.
+->fire
+  state:13.45, error
+  Not in game.
+->pass
+  state:13.46, error
+  Not in game.
+->undo
+  state:13.47, error
+  Not in game.
+->pass
+  state:13.48, error
+  Not in game.
+->fire
+  state:13.49, error
+  Not in game.
+->move(A,4)
+  state:13.50, error
+  Not in game.
+->fire
+  state:13.51, error
+  Not in game.
+->fire
+  state:13.52, error
+  Not in game.
+->fire
+  state:13.53, error
+  Not in game.
+->undo
+  state:13.54, error
+  Not in game.
+->fire
+  state:13.55, error
+  Not in game.
+->move(B,4)
+  state:13.56, error
+  Not in game.
+->move(B,1)
+  state:13.57, error
+  Not in game.
+->move(B,14)
+  state:13.58, error
+  Not in game.
+->move(A,17)
+  state:13.59, error
+  Not in game.
+->pass
+  state:13.60, error
+  Not in game.
+->abort
+  state:13.61, error
+  Not in game.
+->pass
+  state:13.62, error
+  Not in game.
+->fire
+  state:13.63, error
+  Not in game.
+->move(A,4)
+  state:13.64, error
+  Not in game.
+->move(B,13)
+  state:13.65, error
+  Not in game.
+->pass
+  state:13.66, error
+  Not in game.
+->abort
+  state:13.67, error
+  Not in game.
+->undo
+  state:13.68, error
+  Not in game.
+->pass
+  state:13.69, error
+  Not in game.
+->move(C,1)
+  state:13.70, error
+  Not in game.
+->move(C,12)
+  state:13.71, error
+  Not in game.
+->fire
+  state:13.72, error
+  Not in game.
+->fire
+  state:13.73, error
+  Not in game.
+->fire
+  state:13.74, error
+  Not in game.
+->fire
+  state:13.75, error
+  Not in game.
+->move(A,1)
+  state:13.76, error
+  Not in game.
+->fire
+  state:13.77, error
+  Not in game.
+->move(A,17)
+  state:13.78, error
+  Not in game.
+->move(C,14)
+  state:13.79, error
+  Not in game.
+->fire
+  state:13.80, error
+  Not in game.
+->fire
+  state:13.81, error
+  Not in game.
+->move(A,1)
+  state:13.82, error
+  Not in game.
+->undo
+  state:13.83, error
+  Not in game.
+->move(B,16)
+  state:13.84, error
+  Not in game.
+->move(C,1)
+  state:13.85, error
+  Not in game.
+->move(A,11)
+  state:13.86, error
+  Not in game.
+->pass
+  state:13.87, error
+  Not in game.
+->fire
+  state:13.88, error
+  Not in game.
+->move(C,6)
+  state:13.89, error
+  Not in game.
+->move(B,13)
+  state:13.90, error
+  Not in game.
+->move(A,16)
+  state:13.91, error
+  Not in game.
+->redo
+  state:13.92, error
+  Not in game.
+->fire
+  state:13.93, error
+  Not in game.
+->fire
+  state:13.94, error
+  Not in game.
+->pass
+  state:13.95, error
+  Not in game.
+->move(B,8)
+  state:13.96, error
+  Not in game.
+->pass
+  state:13.97, error
+  Not in game.
+->redo
+  state:13.98, error
+  Not in game.
+->fire
+  state:13.99, error
+  Not in game.
+->pass
+  state:13.100, error
+  Not in game.
+->pass
+  state:13.101, error
+  Not in game.
+->fire
+  state:13.102, error
+  Not in game.
+->move(B,5)
+  state:13.103, error
+  Not in game.
+->pass
+  state:13.104, error
+  Not in game.
+->abort
+  state:13.105, error
+  Not in game.
+->play(3,16,18,3)
+  state:13.106, error
+  Starfighter movement should not exceed row - 1 + column - 1 size of the board.
+->pass
+  state:13.107, error
+  Not in game.
+->pass
+  state:13.108, error
+  Not in game.
+->fire
+  state:13.109, error
+  Not in game.
+->move(B,4)
+  state:13.110, error
+  Not in game.
+->undo
+  state:13.111, error
+  Not in game.
+->undo
+  state:13.112, error
+  Not in game.
+->undo
+  state:13.113, error
+  Not in game.
+->move(B,14)
+  state:13.114, error
+  Not in game.
+->move(B,4)
+  state:13.115, error
+  Not in game.
+->move(B,13)
+  state:13.116, error
+  Not in game.
+->redo
+  state:13.117, error
+  Not in game.
+->fire
+  state:13.118, error
+  Not in game.
+->fire
+  state:13.119, error
+  Not in game.
+->pass
+  state:13.120, error
+  Not in game.
+->undo
+  state:13.121, error
+  Not in game.
+->redo
+  state:13.122, error
+  Not in game.
+->fire
+  state:13.123, error
+  Not in game.
+->pass
+  state:13.124, error
+  Not in game.
+->move(A,5)
+  state:13.125, error
+  Not in game.
+->fire
+  state:13.126, error
+  Not in game.
+->move(A,2)
+  state:13.127, error
+  Not in game.
+->move(C,15)
+  state:13.128, error
+  Not in game.
+->move(B,15)
+  state:13.129, error
+  Not in game.
+->undo
+  state:13.130, error
+  Not in game.
+->pass
+  state:13.131, error
+  Not in game.
+->pass
+  state:13.132, error
+  Not in game.
+->fire
+  state:13.133, error
+  Not in game.
+->undo
+  state:13.134, error
+  Not in game.
+->fire
+  state:13.135, error
+  Not in game.
+->fire
+  state:13.136, error
+  Not in game.
+->move(B,13)
+  state:13.137, error
+  Not in game.
+->fire
+  state:13.138, error
+  Not in game.
+->abort
+  state:13.139, error
+  Not in game.
+->pass
+  state:13.140, error
+  Not in game.
+->undo
+  state:13.141, error
+  Not in game.
+->fire
+  state:13.142, error
+  Not in game.
+->fire
+  state:13.143, error
+  Not in game.
+->undo
+  state:13.144, error
+  Not in game.
+->undo
+  state:13.145, error
+  Not in game.
+->pass
+  state:13.146, error
+  Not in game.
+->undo
+  state:13.147, error
+  Not in game.
+->fire
+  state:13.148, error
+  Not in game.
+->undo
+  state:13.149, error
+  Not in game.
+->fire
+  state:13.150, error
+  Not in game.
+->move(B,4)
+  state:13.151, error
+  Not in game.
+->move(C,14)
+  state:13.152, error
+  Not in game.
+->move(A,2)
+  state:13.153, error
+  Not in game.
+->fire
+  state:13.154, error
+  Not in game.
+->fire
+  state:13.155, error
+  Not in game.
+->fire
+  state:13.156, error
+  Not in game.
+->pass
+  state:13.157, error
+  Not in game.
+->move(A,12)
+  state:13.158, error
+  Not in game.
+->pass
+  state:13.159, error
+  Not in game.
+->fire
+  state:13.160, error
+  Not in game.
+->pass
+  state:13.161, error
+  Not in game.
+->fire
+  state:13.162, error
+  Not in game.
+->fire
+  state:13.163, error
+  Not in game.
+->fire
+  state:13.164, error
+  Not in game.
+->move(A,11)
+  state:13.165, error
+  Not in game.
+->fire
+  state:13.166, error
+  Not in game.
+->undo
+  state:13.167, error
+  Not in game.
+->undo
+  state:13.168, error
+  Not in game.
+->undo
+  state:13.169, error
+  Not in game.
+->undo
+  state:13.170, error
+  Not in game.
+->fire
+  state:13.171, error
+  Not in game.
+->fire
+  state:13.172, error
+  Not in game.
+->fire
+  state:13.173, error
+  Not in game.
+->fire
+  state:13.174, error
+  Not in game.
+->fire
+  state:13.175, error
+  Not in game.
+->abort
+  state:13.176, error
+  Not in game.

@@ -1,0 +1,301 @@
+  Welcome to Space Defender Version 1.
+->play(9,6,36,2)
+  state:0.1, error
+  Starfighter movement should not exceed row - 1 + column - 1 size of the board.
+->fire
+  state:0.2, error
+  Not in game.
+->fire
+  state:0.3, error
+  Not in game.
+->move(C,6)
+  state:0.4, error
+  Not in game.
+->undo
+  state:0.5, error
+  Not in game.
+->undo
+  state:0.6, error
+  Not in game.
+->move(B,5)
+  state:0.7, error
+  Not in game.
+->fire
+  state:0.8, error
+  Not in game.
+->undo
+  state:0.9, error
+  Not in game.
+->move(E,5)
+  state:0.10, error
+  Not in game.
+->pass
+  state:0.11, error
+  Not in game.
+->move(I,4)
+  state:0.12, error
+  Not in game.
+->fire
+  state:0.13, error
+  Not in game.
+->undo
+  state:0.14, error
+  Not in game.
+->redo
+  state:0.15, error
+  Not in game.
+->fire
+  state:0.16, error
+  Not in game.
+->fire
+  state:0.17, error
+  Not in game.
+->move(F,5)
+  state:0.18, error
+  Not in game.
+->fire
+  state:0.19, error
+  Not in game.
+->fire
+  state:0.20, error
+  Not in game.
+->undo
+  state:0.21, error
+  Not in game.
+->undo
+  state:0.22, error
+  Not in game.
+->pass
+  state:0.23, error
+  Not in game.
+->fire
+  state:0.24, error
+  Not in game.
+->pass
+  state:0.25, error
+  Not in game.
+->move(B,2)
+  state:0.26, error
+  Not in game.
+->pass
+  state:0.27, error
+  Not in game.
+->pass
+  state:0.28, error
+  Not in game.
+->pass
+  state:0.29, error
+  Not in game.
+->pass
+  state:0.30, error
+  Not in game.
+->pass
+  state:0.31, error
+  Not in game.
+->pass
+  state:0.32, error
+  Not in game.
+->pass
+  state:0.33, error
+  Not in game.
+->undo
+  state:0.34, error
+  Not in game.
+->move(D,4)
+  state:0.35, error
+  Not in game.
+->fire
+  state:0.36, error
+  Not in game.
+->fire
+  state:0.37, error
+  Not in game.
+->move(H,3)
+  state:0.38, error
+  Not in game.
+->pass
+  state:0.39, error
+  Not in game.
+->pass
+  state:0.40, error
+  Not in game.
+->abort
+  state:0.41, error
+  Not in game.
+->move(I,4)
+  state:0.42, error
+  Not in game.
+->fire
+  state:0.43, error
+  Not in game.
+->pass
+  state:0.44, error
+  Not in game.
+->undo
+  state:0.45, error
+  Not in game.
+->pass
+  state:0.46, error
+  Not in game.
+->pass
+  state:0.47, error
+  Not in game.
+->fire
+  state:0.48, error
+  Not in game.
+->abort
+  state:0.49, error
+  Not in game.
+->move(I,5)
+  state:0.50, error
+  Not in game.
+->fire
+  state:0.51, error
+  Not in game.
+->fire
+  state:0.52, error
+  Not in game.
+->undo
+  state:0.53, error
+  Not in game.
+->move(B,1)
+  state:0.54, error
+  Not in game.
+->pass
+  state:0.55, error
+  Not in game.
+->pass
+  state:0.56, error
+  Not in game.
+->move(E,3)
+  state:0.57, error
+  Not in game.
+->move(C,5)
+  state:0.58, error
+  Not in game.
+->move(I,4)
+  state:0.59, error
+  Not in game.
+->fire
+  state:0.60, error
+  Not in game.
+->fire
+  state:0.61, error
+  Not in game.
+->pass
+  state:0.62, error
+  Not in game.
+->fire
+  state:0.63, error
+  Not in game.
+->pass
+  state:0.64, error
+  Not in game.
+->pass
+  state:0.65, error
+  Not in game.
+->undo
+  state:0.66, error
+  Not in game.
+->undo
+  state:0.67, error
+  Not in game.
+->move(G,2)
+  state:0.68, error
+  Not in game.
+->move(E,1)
+  state:0.69, error
+  Not in game.
+->pass
+  state:0.70, error
+  Not in game.
+->fire
+  state:0.71, error
+  Not in game.
+->fire
+  state:0.72, error
+  Not in game.
+->fire
+  state:0.73, error
+  Not in game.
+->undo
+  state:0.74, error
+  Not in game.
+->pass
+  state:0.75, error
+  Not in game.
+->move(I,6)
+  state:0.76, error
+  Not in game.
+->fire
+  state:0.77, error
+  Not in game.
+->move(G,2)
+  state:0.78, error
+  Not in game.
+->fire
+  state:0.79, error
+  Not in game.
+->fire
+  state:0.80, error
+  Not in game.
+->fire
+  state:0.81, error
+  Not in game.
+->fire
+  state:0.82, error
+  Not in game.
+->move(D,2)
+  state:0.83, error
+  Not in game.
+->pass
+  state:0.84, error
+  Not in game.
+->pass
+  state:0.85, error
+  Not in game.
+->pass
+  state:0.86, error
+  Not in game.
+->fire
+  state:0.87, error
+  Not in game.
+->fire
+  state:0.88, error
+  Not in game.
+->fire
+  state:0.89, error
+  Not in game.
+->undo
+  state:0.90, error
+  Not in game.
+->pass
+  state:0.91, error
+  Not in game.
+->fire
+  state:0.92, error
+  Not in game.
+->pass
+  state:0.93, error
+  Not in game.
+->move(G,6)
+  state:0.94, error
+  Not in game.
+->move(C,2)
+  state:0.95, error
+  Not in game.
+->pass
+  state:0.96, error
+  Not in game.
+->fire
+  state:0.97, error
+  Not in game.
+->fire
+  state:0.98, error
+  Not in game.
+->pass
+  state:0.99, error
+  Not in game.
+->abort
+  state:0.100, error
+  Not in game.

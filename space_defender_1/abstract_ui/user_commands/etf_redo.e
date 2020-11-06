@@ -15,8 +15,9 @@ feature -- command
     	do
 
     		if model.is_game_started then
+    			model.increment_cursor
     			if model.cursor > 0 and model.cursor < model.history.count then
-    				model.increment_cursor
+
     				model.history[model.cursor].redo
 				else
 					model.update_error_state

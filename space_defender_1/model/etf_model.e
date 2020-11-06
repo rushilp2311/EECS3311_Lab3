@@ -37,6 +37,8 @@ feature {NONE} -- Initialization
 			create old_ship_location.default_create
 			create history.make_empty
 			create location.make_empty
+			create string_array.make_empty
+			create output_string.make_empty
 			ship_location.compare_objects
 			old_ship_location.compare_objects
 		end
@@ -57,6 +59,8 @@ feature --attributes
 	history : ARRAY[COMMANDS]
 	location: ARRAY[TUPLE[old_l:TUPLE[row:INTEGER_32;column:INTEGER_32];curr:TUPLE[row:INTEGER_32;column:INTEGER_32]]]
 	cursor : INTEGER_32
+	output_string : STRING
+	string_array: ARRAY[STRING]
 
 
 feature -- model operations
@@ -64,6 +68,12 @@ feature -- model operations
 	reset
 		do
 			make
+		end
+
+	update_output_string(s:STRING)
+		do
+			output_msg := s
+			grid_layout := ""
 		end
 
 	add_locations(location_tuple : TUPLE[old_l:TUPLE[row:INTEGER_32;column:INTEGER_32];curr:TUPLE[row:INTEGER_32;column:INTEGER_32]])
@@ -77,6 +87,9 @@ feature -- model operations
 
 	add_command (c:COMMANDS)
 		do
+			if cursor < history.count then
+				cursor := history.count
+			end
 			history.force (c, history.count + 1)
 			cursor := cursor + 1
 		end
@@ -225,15 +238,13 @@ feature -- model operations
 
 
 			grid_layout.append("%N")
-			grid_layout.append ("      ")
+			grid_layout.append ("    ")
 			across 1 |..| board.width as i
 			loop
-				if (i.item + 1) = board.width  then
-					grid_layout.append("" +  (i.item).out+" ")
-				elseif (i.item ) = board.width then
-					grid_layout.append("" +  (i.item).out+"")
+				if (i.item) < 10  then
+					grid_layout.append("  " +  (i.item).out)
 				else
-					grid_layout.append("" +  (i.item).out+"  ")
+					grid_layout.append(" " +  (i.item).out)
 				end
 
 			end
@@ -258,6 +269,7 @@ feature -- model operations
 		local
 			s_row:REAL_64
 		do
+			error_state:=0
 			is_game_started:=true
 			s_row := row/2
 			ship_location.row := s_row.ceiling
@@ -268,7 +280,7 @@ feature -- model operations
 			max_projectile_move := project_mov
 			make_board
 			update_success_state
-			error_state:=0
+
 			set_output_success_msg_state
 			old_ship_location.row := ship_location.row
 			old_ship_location.column := ship_location.column
@@ -283,6 +295,7 @@ feature -- model operations
 		j:INTEGER_32
 
 		do
+			error_state :=0
 			update_projectile_location
 			old_ship_location.column := ship_location.column
 			old_ship_location.row := ship_location.row
@@ -354,8 +367,6 @@ feature -- model operations
 						k := k - 1
 					end
 				end
-
-			error_state:=0
 			update_success_state
 			set_output_success_msg_state
 			display_projectile_location
@@ -374,6 +385,7 @@ feature -- model operations
 		local
 			projectile_location :TUPLE[row:INTEGER_32;column:INTEGER_32]
 		do
+			error_state := 0
 			update_projectile_location
 			is_projectile_collided
 			if is_game_started then
@@ -390,9 +402,9 @@ feature -- model operations
 
 			projectile_list.force (projectile_location, projectile_list.count+1)
 			make_board
-			location.force ([old_ship_location,ship_location], location.count+1)
+			location.force ([ship_location,ship_location], location.count+1)
 			end
-			error_state := 0
+
 
 
 			if is_game_started then
@@ -403,6 +415,7 @@ feature -- model operations
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	pass
 		do
+			error_state:=0
 			update_success_state
 			set_output_success_msg_state
 			update_projectile_location
@@ -413,7 +426,7 @@ feature -- model operations
 				display_projectile_location
 				output_msg.append ("%N"+"  The Starfighter stays at: "+"["+row_indexes.item (ship_location.row).out+","+ship_location.column.out+"]")
 			end
-			error_state:=0
+
 
 
 		end
@@ -421,10 +434,12 @@ feature -- model operations
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 abort
 		do
+		error_state:=0
 			cursor:=0
+
 			location.make_empty
 			history.make_empty
-			error_state:=0
+
 			update_success_state
 			set_output_success_msg_state
 			is_game_started:=false
@@ -433,6 +448,7 @@ abort
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 	output : STRING
+
 		do
 			create Result.make_empty
 			if(error_state > 0) then
@@ -454,6 +470,7 @@ feature -- queries
 				Result := "  Welcome to Space Defender Version 1."
 			else
 				Result.append(output)
+				string_array.force(output,string_array.count + 1)
 			end
 
 		end

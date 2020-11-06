@@ -1,0 +1,57 @@
+  Welcome to Space Defender Version 1.
+->play(10,11,34,1)
+  state:0.1, error
+Starfighter movement should not exceed row - 1 + column - 1 size of the board.
+->pass
+  state:0.2, error
+  Not in game.
+->fire
+  state:0.3, error
+  Not in game.
+->undo
+  state:0.4, error
+  Not in game.
+->fire
+  state:0.5, error
+  Not in game.
+->pass
+  state:0.6, error
+  Not in game.
+->pass
+  state:0.7, error
+  Not in game.
+->undo
+  state:0.8, error
+  Not in game.
+->fire
+  state:0.9, error
+  Not in game.
+->move(I,1)
+  state:0.10, error
+  Not in game.
+->abort
+  state:0.11, error
+  Not in game.
+->play(5,26,3,1)
+  state:1.0, ok
+      1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 26
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->undo
+  state:1.1, error
+  Nothing left to undo.
+->pass
+  state:2.1, ok
+  The Starfighter stays at: [C,1]
+      1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25 26
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->abort
+  state:3.0, ok
+  Game has been exited.

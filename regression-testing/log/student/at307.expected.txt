@@ -1,0 +1,177 @@
+  Welcome to Space Defender Version 1.
+->play(5,18,17,1)
+  state:1.0, ok
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:2.0, ok
+  The Starfighter fires a projectile at: [C,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C S  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:3.0, ok
+  A projectile moves: [C,2] -> [C,3]
+  The Starfighter fires a projectile at: [C,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C S  *  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->pass
+  state:4.0, ok
+  A projectile moves: [C,3] -> [C,4]
+  A projectile moves: [C,2] -> [C,3]
+  The Starfighter stays at: [C,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C S  _  *  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->move(C,17)
+  state:5.0, ok
+  A projectile moves: [C,4] -> [C,5]
+  A projectile moves: [C,3] -> [C,4]
+  The Starfighter moves and collides with a projectile: [C,1] -> [C,4]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  X  *  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+  The game is over. Better luck next time!
+->fire
+  state:5.1, error
+  Not in game.
+->fire
+  state:5.2, error
+  Not in game.
+->fire
+  state:5.3, error
+  Not in game.
+->fire
+  state:5.4, error
+  Not in game.
+->move(C,6)
+  state:5.5, error
+  Not in game.
+->move(E,6)
+  state:5.6, error
+  Not in game.
+->move(A,15)
+  state:5.7, error
+  Not in game.
+->fire
+  state:5.8, error
+  Not in game.
+->pass
+  state:5.9, error
+  Not in game.
+->fire
+  state:5.10, error
+  Not in game.
+->pass
+  state:5.11, error
+  Not in game.
+->undo
+  state:5.12, error
+  Not in game.
+->fire
+  state:5.13, error
+  Not in game.
+->fire
+  state:5.14, error
+  Not in game.
+->undo
+  state:5.15, error
+  Not in game.
+->fire
+  state:5.16, error
+  Not in game.
+->undo
+  state:5.17, error
+  Not in game.
+->fire
+  state:5.18, error
+  Not in game.
+->pass
+  state:5.19, error
+  Not in game.
+->pass
+  state:5.20, error
+  Not in game.
+->pass
+  state:5.21, error
+  Not in game.
+->pass
+  state:5.22, error
+  Not in game.
+->pass
+  state:5.23, error
+  Not in game.
+->move(A,14)
+  state:5.24, error
+  Not in game.
+->fire
+  state:5.25, error
+  Not in game.
+->undo
+  state:5.26, error
+  Not in game.
+->fire
+  state:5.27, error
+  Not in game.
+->fire
+  state:5.28, error
+  Not in game.
+->move(B,17)
+  state:5.29, error
+  Not in game.
+->pass
+  state:5.30, error
+  Not in game.
+->fire
+  state:5.31, error
+  Not in game.
+->fire
+  state:5.32, error
+  Not in game.
+->undo
+  state:5.33, error
+  Not in game.
+->fire
+  state:5.34, error
+  Not in game.
+->move(A,10)
+  state:5.35, error
+  Not in game.
+->undo
+  state:5.36, error
+  Not in game.
+->pass
+  state:5.37, error
+  Not in game.
+->redo
+  state:5.38, error
+  Not in game.
+->fire
+  state:5.39, error
+  Not in game.
+->fire
+  state:5.40, error
+  Not in game.
+->fire
+  state:5.41, error
+  Not in game.
+->abort
+  state:5.42, error
+  Not in game.

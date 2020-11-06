@@ -1,0 +1,71 @@
+  Welcome to Space Defender Version 1.
+->play(3,20,13,3)
+  state:1.0, ok
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:2.0, ok
+  The Starfighter fires a projectile at: [B,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B S  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->move(B,11)
+  state:3.0, ok
+  A projectile moves: [B,2] -> [B,5]
+  The Starfighter moves and collides with a projectile: [B,1] -> [B,5]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  X  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+  The game is over. Better luck next time!
+->move(B,13)
+  state:3.1, error
+  Not in game.
+->fire
+  state:3.2, error
+  Not in game.
+->pass
+  state:3.3, error
+  Not in game.
+->fire
+  state:3.4, error
+  Not in game.
+->fire
+  state:3.5, error
+  Not in game.
+->move(B,15)
+  state:3.6, error
+  Not in game.
+->fire
+  state:3.7, error
+  Not in game.
+->fire
+  state:3.8, error
+  Not in game.
+->fire
+  state:3.9, error
+  Not in game.
+->fire
+  state:3.10, error
+  Not in game.
+->fire
+  state:3.11, error
+  Not in game.
+->pass
+  state:3.12, error
+  Not in game.
+->pass
+  state:3.13, error
+  Not in game.
+->pass
+  state:3.14, error
+  Not in game.
+->undo
+  state:3.15, error
+  Not in game.
+->abort
+  state:3.16, error
+  Not in game.

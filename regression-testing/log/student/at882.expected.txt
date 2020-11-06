@@ -1,0 +1,602 @@
+  Welcome to Space Defender Version 1.
+->play(6,9,9,1)
+  state:1.0, ok
+      1  2  3  4  5  6  7  8  9
+    A _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _
+    C S  _  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _
+->fire
+  state:2.0, ok
+  The Starfighter fires a projectile at: [C,1]
+      1  2  3  4  5  6  7  8  9
+    A _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _
+    C S  *  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _
+->move(F,6)
+  state:3.0, ok
+  A projectile moves: [C,2] -> [C,3]
+  The Starfighter moves: [C,1] -> [F,6]
+      1  2  3  4  5  6  7  8  9
+    A _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _
+    C _  _  *  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  S  _  _  _
+->undo
+  state:2.0, ok
+  The Starfighter fires a projectile at: [C,1]
+      1  2  3  4  5  6  7  8  9
+    A _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _
+    C S  *  _  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _
+->move(C,7)
+  state:3.0, ok
+  A projectile moves: [C,2] -> [C,3]
+  The Starfighter moves and collides with a projectile: [C,1] -> [C,3]
+      1  2  3  4  5  6  7  8  9
+    A _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _
+    C _  _  X  _  _  _  _  _  _
+    D _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _
+  The game is over. Better luck next time!
+->fire
+  state:3.1, error
+  Not in game.
+->move(D,2)
+  state:3.2, error
+  Not in game.
+->fire
+  state:3.3, error
+  Not in game.
+->fire
+  state:3.4, error
+  Not in game.
+->fire
+  state:3.5, error
+  Not in game.
+->pass
+  state:3.6, error
+  Not in game.
+->abort
+  state:3.7, error
+  Not in game.
+->play(7,20,8,2)
+  state:4.0, ok
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->undo
+  state:4.1, error
+  Nothing left to undo.
+->fire
+  state:5.0, ok
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->pass
+  state:6.0, ok
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter stays at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  _  _  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->move(B,12)
+  state:6.1, error
+  The location to move to is out of the Starfighter's movement range.
+->move(A,10)
+  state:6.2, error
+  The location to move to is out of the Starfighter's movement range.
+->fire
+  state:7.0, ok
+  A projectile moves: [D,4] -> [D,6]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  _  _  *  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:8.0, ok
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  *  _  _  _  *  _  _  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:9.0, ok
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  *  _  *  _  _  _  *  _  _  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:10.0, ok
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  *  _  *  _  *  _  _  _  *  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->pass
+  state:11.0, ok
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter stays at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  _  _  *  _  *  _  *  _  *  _  _  _  *  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->move(D,17)
+  state:11.1, error
+  The location to move to is out of the Starfighter's movement range.
+->undo
+  state:10.0, ok
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  *  _  *  _  *  _  _  _  *  _  _  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:11.0, ok
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  *  _  *  _  *  _  *  _  _  _  *  _  _  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:12.0, ok
+  A projectile moves: [D,14] -> [D,16]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  *  _  *  _  *  _  *  _  *  _  _  _  *  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:13.0, ok
+  A projectile moves: [D,16] -> [D,18]
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  *  _  *  _  *  _  *  _  *  _  *  _  _  _  *  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->undo
+  state:12.0, ok
+  A projectile moves: [D,14] -> [D,16]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  *  _  *  _  *  _  *  _  *  _  _  _  *  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->pass
+  state:13.0, ok
+  A projectile moves: [D,16] -> [D,18]
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter stays at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  _  _  *  _  *  _  *  _  *  _  *  _  *  _  _  _  *  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->undo
+  state:12.0, ok
+  A projectile moves: [D,14] -> [D,16]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  *  _  *  _  *  _  *  _  *  _  _  _  *  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->redo
+  state:13.0, ok
+  A projectile moves: [D,16] -> [D,18]
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter stays at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  _  _  *  _  *  _  *  _  *  _  *  _  *  _  _  _  *  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->undo
+  state:12.0, ok
+  A projectile moves: [D,14] -> [D,16]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  *  _  *  _  *  _  *  _  *  _  _  _  *  _  _  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->redo
+  state:13.0, ok
+  A projectile moves: [D,16] -> [D,18]
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter stays at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  _  _  *  _  *  _  *  _  *  _  *  _  *  _  _  _  *  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:14.0, ok
+  A projectile moves: [D,18] -> [D,20]
+  A projectile moves: [D,14] -> [D,16]
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  _  _  *  _  *  _  *  _  *  _  *  _  *  _  _  _  *
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:15.0, ok
+  A projectile moves: [D,20] -> out of the board
+  A projectile moves: [D,16] -> [D,18]
+  A projectile moves: [D,14] -> [D,16]
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  *  _  _  _  *  _  *  _  *  _  *  _  *  _  *  _  _
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->move(B,8)
+  state:15.1, error
+  The location to move to is out of the Starfighter's movement range.
+->pass
+  state:16.0, ok
+  A projectile moves: [D,18] -> [D,20]
+  A projectile moves: [D,16] -> [D,18]
+  A projectile moves: [D,14] -> [D,16]
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,4] -> [D,6]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter stays at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  _  _  *  _  *  _  _  _  *  _  *  _  *  _  *  _  *  _  *
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:17.0, ok
+  A projectile moves: [D,20] -> out of the board
+  A projectile moves: [D,18] -> [D,20]
+  A projectile moves: [D,16] -> [D,18]
+  A projectile moves: [D,14] -> [D,16]
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,4] -> [D,6]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  _  _  *  _  *  _  _  _  *  _  *  _  *  _  *  _  *
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->pass
+  state:18.0, ok
+  A projectile moves: [D,20] -> out of the board
+  A projectile moves: [D,18] -> [D,20]
+  A projectile moves: [D,16] -> [D,18]
+  A projectile moves: [D,14] -> [D,16]
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,6] -> [D,8]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter stays at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  _  _  *  _  _  _  *  _  *  _  _  _  *  _  *  _  *  _  *
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->move(F,17)
+  state:18.1, error
+  The location to move to is out of the Starfighter's movement range.
+->pass
+  state:19.0, ok
+  A projectile moves: [D,20] -> out of the board
+  A projectile moves: [D,18] -> [D,20]
+  A projectile moves: [D,16] -> [D,18]
+  A projectile moves: [D,14] -> [D,16]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,4] -> [D,6]
+  The Starfighter stays at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  _  _  _  _  *  _  _  _  *  _  *  _  _  _  *  _  *  _  *
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:20.0, ok
+  A projectile moves: [D,20] -> out of the board
+  A projectile moves: [D,18] -> [D,20]
+  A projectile moves: [D,16] -> [D,18]
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,10] -> [D,12]
+  A projectile moves: [D,6] -> [D,8]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  _  _  _  _  *  _  _  _  *  _  *  _  _  _  *  _  *
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->fire
+  state:21.0, ok
+  A projectile moves: [D,20] -> out of the board
+  A projectile moves: [D,18] -> [D,20]
+  A projectile moves: [D,14] -> [D,16]
+  A projectile moves: [D,12] -> [D,14]
+  A projectile moves: [D,8] -> [D,10]
+  A projectile moves: [D,2] -> [D,4]
+  The Starfighter fires a projectile at: [D,1]
+      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+    A _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    B _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    C _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    D S  *  _  *  _  _  _  _  _  *  _  _  _  *  _  *  _  _  _  *
+    E _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    F _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+    G _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+->abort
+  state:22.0, ok
+  Game has been exited.
+->move(B,17)
+  state:22.1, error
+  Not in game.
+->undo
+  state:22.2, error
+  Not in game.
+->move(F,3)
+  state:22.3, error
+  Not in game.
+->move(E,4)
+  state:22.4, error
+  Not in game.
+->fire
+  state:22.5, error
+  Not in game.
+->fire
+  state:22.6, error
+  Not in game.
+->undo
+  state:22.7, error
+  Not in game.
+->fire
+  state:22.8, error
+  Not in game.
+->pass
+  state:22.9, error
+  Not in game.
+->fire
+  state:22.10, error
+  Not in game.
+->move(A,17)
+  state:22.11, error
+  Not in game.
+->pass
+  state:22.12, error
+  Not in game.
+->pass
+  state:22.13, error
+  Not in game.
+->move(B,20)
+  state:22.14, error
+  Not in game.
+->move(A,19)
+  state:22.15, error
+  Not in game.
+->undo
+  state:22.16, error
+  Not in game.
+->move(D,7)
+  state:22.17, error
+  Not in game.
+->fire
+  state:22.18, error
+  Not in game.
+->pass
+  state:22.19, error
+  Not in game.
+->fire
+  state:22.20, error
+  Not in game.
+->move(B,9)
+  state:22.21, error
+  Not in game.
+->fire
+  state:22.22, error
+  Not in game.
+->fire
+  state:22.23, error
+  Not in game.
+->pass
+  state:22.24, error
+  Not in game.
+->move(A,20)
+  state:22.25, error
+  Not in game.
+->fire
+  state:22.26, error
+  Not in game.
+->redo
+  state:22.27, error
+  Not in game.
+->pass
+  state:22.28, error
+  Not in game.
+->abort
+  state:22.29, error
+  Not in game.

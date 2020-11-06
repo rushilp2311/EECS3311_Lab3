@@ -15,6 +15,9 @@ feature -- command
     	do
 			-- perform some update on the model state
 			if model.is_game_started then
+				if model.history.count > 0 and model.cursor > 0 then
+					model.history.remove_tail (model.history.count - model.cursor)
+				end
 				model.add_command (create {FIRE_COMMAND}.make)
 				model.history[model.cursor].execute(0,0)
 			else
